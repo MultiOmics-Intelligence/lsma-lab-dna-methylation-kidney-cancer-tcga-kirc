@@ -1,0 +1,101 @@
+collection	direction	term	description	set_size	genes_with_differential_cpg	gene_ratio	p_value	padj
+hallmark	hypo	HALLMARK_INFLAMMATORY_RESPONSE	Inflammatory response	194	69	0.35567	9.1587e-08	4.5793e-06
+hallmark	hypo	HALLMARK_ALLOGRAFT_REJECTION	Allograft rejection	188	68	0.3617	5.3087e-07	1.3272e-05
+hallmark	hyper	HALLMARK_PANCREAS_BETA_CELLS	Pancreas beta cells	37	20	0.54054	6.145e-06	0.00030725
+hallmark	hypo	HALLMARK_MYOGENESIS	Myogenesis	194	72	0.37113	5.6615e-05	0.00094358
+hallmark	hypo	HALLMARK_COMPLEMENT	Complement	193	62	0.32124	0.00023568	0.002946
+hallmark	hypo	HALLMARK_INTERFERON_GAMMA_RESPONSE	Interferon gamma response	196	58	0.29592	0.00093426	0.0082538
+hallmark	hypo	HALLMARK_COAGULATION	Coagulation	129	43	0.33333	0.00099045	0.0082538
+hallmark	hypo	HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION	Epithelial mesenchymal transition	190	62	0.32632	0.0029766	0.021261
+hallmark	hypo	HALLMARK_TNFA_SIGNALING_VIA_NFKB	Tnfa signaling via nfkb	197	60	0.30457	0.003508	0.021925
+hallmark	hypo	HALLMARK_ESTROGEN_RESPONSE_EARLY	Estrogen response early	192	64	0.33333	0.0050369	0.027983
+hallmark	hypo	HALLMARK_KRAS_SIGNALING_DN	Kras signaling dn	185	55	0.2973	0.0091567	0.045784
+hallmark	hypo	HALLMARK_XENOBIOTIC_METABOLISM	Xenobiotic metabolism	195	54	0.27692	0.010296	0.0468
+hallmark	hypo	HALLMARK_APICAL_JUNCTION	Apical junction	193	58	0.30052	0.013108	0.054615
+hallmark	hypo	HALLMARK_IL6_JAK_STAT3_SIGNALING	Il6 jak stat3 signaling	81	24	0.2963	0.018995	0.07306
+hallmark	hypo	HALLMARK_APOPTOSIS	Apoptosis	152	43	0.28289	0.032767	0.11703
+hallmark	hypo	HALLMARK_KRAS_SIGNALING_UP	Kras signaling up	188	51	0.27128	0.036683	0.12228
+hallmark	hyper	HALLMARK_APICAL_JUNCTION	Apical junction	193	59	0.3057	0.0062049	0.15512
+hallmark	hypo	HALLMARK_INTERFERON_ALPHA_RESPONSE	Interferon alpha response	97	25	0.25773	0.053426	0.16696
+hallmark	hypo	HALLMARK_ESTROGEN_RESPONSE_LATE	Estrogen response late	193	53	0.27461	0.067504	0.19854
+hallmark	hypo	HALLMARK_UV_RESPONSE_DN	Uv response dn	142	45	0.3169	0.098905	0.26954
+hallmark	hypo	HALLMARK_HYPOXIA	Hypoxia	190	52	0.27368	0.10243	0.26954
+hallmark	hypo	HALLMARK_IL2_STAT5_SIGNALING	Il2 stat5 signaling	194	52	0.26804	0.12598	0.31495
+hallmark	hyper	HALLMARK_KRAS_SIGNALING_DN	Kras signaling dn	185	49	0.26486	0.019652	0.32754
+hallmark	hypo	HALLMARK_PI3K_AKT_MTOR_SIGNALING	Pi3k akt mtor signaling	103	27	0.26214	0.22003	0.52388
+hallmark	hypo	HALLMARK_PANCREAS_BETA_CELLS	Pancreas beta cells	37	10	0.27027	0.23637	0.5372
+hallmark	hypo	HALLMARK_MITOTIC_SPINDLE	Mitotic spindle	189	46	0.24339	0.44537	0.93535
+hallmark	hypo	HALLMARK_WNT_BETA_CATENIN_SIGNALING	Wnt beta catenin signaling	42	12	0.28571	0.44897	0.93535
+hallmark	hypo	HALLMARK_ANDROGEN_RESPONSE	Androgen response	96	21	0.21875	0.6277	1.0
+hallmark	hypo	HALLMARK_GLYCOLYSIS	Glycolysis	188	39	0.20745	0.62366	1.0
+hallmark	hypo	HALLMARK_NOTCH_SIGNALING	Notch signaling	32	8	0.25	0.62199	1.0
+hallmark	hypo	HALLMARK_PEROXISOME	Peroxisome	100	20	0.2	0.56323	1.0
+hallmark	hypo	HALLMARK_TGF_BETA_SIGNALING	Tgf beta signaling	53	13	0.24528	0.53646	1.0
+hallmark	hyper	HALLMARK_E2F_TARGETS	E2f targets	193	10	0.051813	1.0	1.0
+hallmark	hyper	HALLMARK_MYC_TARGETS_V1	Myc targets v1	192	9	0.046875	1.0	1.0
+hallmark	hyper	HALLMARK_G2M_CHECKPOINT	G2m checkpoint	192	16	0.083333	1.0	1.0
+hallmark	hypo	HALLMARK_P53_PATHWAY	P53 pathway	195	42	0.21538	0.62916	1.0
+hallmark	hyper	HALLMARK_MTORC1_SIGNALING	Mtorc1 signaling	194	17	0.087629	0.99997	1.0
+hallmark	hyper	HALLMARK_MYC_TARGETS_V2	Myc targets v2	57	2	0.035088	0.99975	1.0
+hallmark	hyper	HALLMARK_TNFA_SIGNALING_VIA_NFKB	Tnfa signaling via nfkb	197	24	0.12183	0.99929	1.0
+hallmark	hyper	HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION	Epithelial mesenchymal transition	190	29	0.15263	0.99675	1.0
+hallmark	hyper	HALLMARK_CHOLESTEROL_HOMEOSTASIS	Cholesterol homeostasis	70	6	0.085714	0.99665	1.0
+hallmark	hyper	HALLMARK_OXIDATIVE_PHOSPHORYLATION	Oxidative phosphorylation	188	8	0.042553	1.0	1.0
+hallmark	hypo	HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY	Reactive oxygen species pathway	47	9	0.19149	0.67838	1.0
+hallmark	hypo	HALLMARK_DNA_REPAIR	Dna repair	143	11	0.076923	0.99991	1.0
+hallmark	hypo	HALLMARK_MTORC1_SIGNALING	Mtorc1 signaling	194	35	0.18041	0.74823	1.0
+hallmark	hypo	HALLMARK_E2F_TARGETS	E2f targets	193	17	0.088083	0.99996	1.0
+hallmark	hypo	HALLMARK_G2M_CHECKPOINT	G2m checkpoint	192	20	0.10417	0.99995	1.0
+hallmark	hypo	HALLMARK_UNFOLDED_PROTEIN_RESPONSE	Unfolded protein response	111	8	0.072072	0.99993	1.0
+hallmark	hyper	HALLMARK_GLYCOLYSIS	Glycolysis	188	25	0.13298	0.99638	1.0
+hallmark	hypo	HALLMARK_PROTEIN_SECRETION	Protein secretion	88	9	0.10227	0.99502	1.0
+hallmark	hypo	HALLMARK_MYC_TARGETS_V2	Myc targets v2	57	5	0.087719	0.98898	1.0
+hallmark	hypo	HALLMARK_CHOLESTEROL_HOMEOSTASIS	Cholesterol homeostasis	70	8	0.11429	0.98529	1.0
+hallmark	hypo	HALLMARK_FATTY_ACID_METABOLISM	Fatty acid metabolism	147	18	0.12245	0.98485	1.0
+hallmark	hypo	HALLMARK_HEME_METABOLISM	Heme metabolism	187	29	0.15508	0.97588	1.0
+hallmark	hypo	HALLMARK_UV_RESPONSE_UP	Uv response up	155	25	0.16129	0.96979	1.0
+hallmark	hypo	HALLMARK_ADIPOGENESIS	Adipogenesis	194	30	0.15464	0.94728	1.0
+hallmark	hypo	HALLMARK_ANGIOGENESIS	Angiogenesis	34	6	0.17647	0.84209	1.0
+hallmark	hypo	HALLMARK_SPERMATOGENESIS	Spermatogenesis	131	22	0.16794	0.84085	1.0
+hallmark	hypo	HALLMARK_BILE_ACID_METABOLISM	Bile acid metabolism	107	18	0.16822	0.79218	1.0
+hallmark	hypo	HALLMARK_HEDGEHOG_SIGNALING	Hedgehog signaling	32	8	0.25	0.75394	1.0
+hallmark	hypo	HALLMARK_APICAL_SURFACE	Apical surface	41	8	0.19512	0.74576	1.0
+hallmark	hyper	HALLMARK_DNA_REPAIR	Dna repair	143	13	0.090909	0.99589	1.0
+hallmark	hyper	HALLMARK_ADIPOGENESIS	Adipogenesis	194	28	0.14433	0.92414	1.0
+hallmark	hyper	HALLMARK_PROTEIN_SECRETION	Protein secretion	88	9	0.10227	0.99113	1.0
+hallmark	hyper	HALLMARK_BILE_ACID_METABOLISM	Bile acid metabolism	107	16	0.14953	0.76623	1.0
+hallmark	hyper	HALLMARK_WNT_BETA_CATENIN_SIGNALING	Wnt beta catenin signaling	42	10	0.2381	0.75727	1.0
+hallmark	hyper	HALLMARK_ANGIOGENESIS	Angiogenesis	34	6	0.17647	0.74866	1.0
+hallmark	hyper	HALLMARK_SPERMATOGENESIS	Spermatogenesis	131	21	0.16031	0.74216	1.0
+hallmark	hyper	HALLMARK_ANDROGEN_RESPONSE	Androgen response	96	20	0.20833	0.70633	1.0
+hallmark	hyper	HALLMARK_MITOTIC_SPINDLE	Mitotic spindle	189	42	0.22222	0.69449	1.0
+hallmark	hyper	HALLMARK_MYOGENESIS	Myogenesis	194	44	0.2268	0.67886	1.0
+hallmark	hyper	HALLMARK_UV_RESPONSE_DN	Uv response dn	142	36	0.25352	0.6785	1.0
+hallmark	hyper	HALLMARK_ESTROGEN_RESPONSE_LATE	Estrogen response late	193	41	0.21244	0.63767	1.0
+hallmark	hyper	HALLMARK_PEROXISOME	Peroxisome	100	18	0.18	0.63455	1.0
+hallmark	hyper	HALLMARK_TGF_BETA_SIGNALING	Tgf beta signaling	53	15	0.28302	0.28113	1.0
+hallmark	hyper	HALLMARK_KRAS_SIGNALING_UP	Kras signaling up	188	41	0.21809	0.26095	1.0
+hallmark	hyper	HALLMARK_APICAL_SURFACE	Apical surface	41	12	0.29268	0.18502	1.0
+hallmark	hyper	HALLMARK_ESTROGEN_RESPONSE_EARLY	Estrogen response early	192	54	0.28125	0.1567	1.0
+hallmark	hyper	HALLMARK_NOTCH_SIGNALING	Notch signaling	32	12	0.375	0.11029	1.0
+hallmark	hyper	HALLMARK_HEME_METABOLISM	Heme metabolism	187	33	0.17647	0.76838	1.0
+hallmark	hyper	HALLMARK_INTERFERON_GAMMA_RESPONSE	Interferon gamma response	196	21	0.10714	0.99566	1.0
+hallmark	hyper	HALLMARK_COAGULATION	Coagulation	129	21	0.16279	0.77419	1.0
+hallmark	hyper	HALLMARK_IL2_STAT5_SIGNALING	Il2 stat5 signaling	194	38	0.19588	0.80921	1.0
+hallmark	hyper	HALLMARK_APOPTOSIS	Apoptosis	152	22	0.14474	0.98092	1.0
+hallmark	hyper	HALLMARK_UNFOLDED_PROTEIN_RESPONSE	Unfolded protein response	111	13	0.11712	0.97984	1.0
+hallmark	hyper	HALLMARK_INTERFERON_ALPHA_RESPONSE	Interferon alpha response	97	9	0.092784	0.96729	1.0
+hallmark	hyper	HALLMARK_PI3K_AKT_MTOR_SIGNALING	Pi3k akt mtor signaling	103	16	0.15534	0.96599	1.0
+hallmark	hyper	HALLMARK_INFLAMMATORY_RESPONSE	Inflammatory response	194	24	0.12371	0.95474	1.0
+hallmark	hyper	HALLMARK_UV_RESPONSE_UP	Uv response up	155	25	0.16129	0.94584	1.0
+hallmark	hyper	HALLMARK_COMPLEMENT	Complement	193	29	0.15026	0.94446	1.0
+hallmark	hyper	HALLMARK_FATTY_ACID_METABOLISM	Fatty acid metabolism	147	17	0.11565	0.94039	1.0
+hallmark	hyper	HALLMARK_IL6_JAK_STAT3_SIGNALING	Il6 jak stat3 signaling	81	9	0.11111	0.93788	1.0
+hallmark	hyper	HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY	Reactive oxygen species pathway	47	6	0.12766	0.93256	1.0
+hallmark	hyper	HALLMARK_XENOBIOTIC_METABOLISM	Xenobiotic metabolism	195	28	0.14359	0.9318	1.0
+hallmark	hypo	HALLMARK_OXIDATIVE_PHOSPHORYLATION	Oxidative phosphorylation	188	10	0.053191	1.0	1.0
+hallmark	hyper	HALLMARK_P53_PATHWAY	P53 pathway	195	35	0.17949	0.9106	1.0
+hallmark	hyper	HALLMARK_ALLOGRAFT_REJECTION	Allograft rejection	188	27	0.14362	0.89775	1.0
+hallmark	hyper	HALLMARK_HYPOXIA	Hypoxia	190	37	0.19474	0.88915	1.0
+hallmark	hyper	HALLMARK_HEDGEHOG_SIGNALING	Hedgehog signaling	32	8	0.25	0.79116	1.0
+hallmark	hypo	HALLMARK_MYC_TARGETS_V1	Myc targets v1	192	7	0.036458	1.0	1.0

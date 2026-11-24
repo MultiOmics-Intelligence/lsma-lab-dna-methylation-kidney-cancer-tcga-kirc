@@ -1,0 +1,121 @@
+{
+  "workflow": "dna-methylation",
+  "workflow_version": "1.0.0",
+  "random_seed": 42,
+  "lab_run_time": "10 min 17 s (import from the GDC: 6 min 26 s)",
+  "validation_run_time": "9 min 17 s (GSE61441, uploaded as a beta-value table: 5 s)",
+  "parameters": {
+    "input": {
+      "sample_preparation": {
+        "version": 1,
+        "condition": "tissue",
+        "relabel": {},
+        "groups": [
+          "normal",
+          "tumour"
+        ],
+        "reference": "normal",
+        "excluded": {},
+        "covariates": [
+          "patient"
+        ],
+        "pairing": "patient"
+      }
+    },
+    "qc": {
+      "remove_sex_chromosomes": true,
+      "remove_snp_probes": true,
+      "max_missing_fraction": 0,
+      "max_failed_fraction": 0.05,
+      "snp_maf": 0.01,
+      "remove_non_cpg": true,
+      "outlier_mad": 3,
+      "group_column": null
+    },
+    "exploration": {
+      "n_top_probes": 5000,
+      "color_by": null,
+      "n_heatmap_probes": 50,
+      "linkage": "complete"
+    },
+    "differential_methylation": {
+      "alpha": 0.05,
+      "delta_beta": 0.1,
+      "p_adjust_method": "BH",
+      "robust": false,
+      "subset_to_contrast": false,
+      "test_level": "tumour",
+      "group_column": "tissue",
+      "covariates": [
+        "patient"
+      ],
+      "reference_level": "normal"
+    },
+    "regions": {
+      "enabled": true,
+      "min_cpgs": 3,
+      "min_mean_delta": 0.05,
+      "fdr": null,
+      "lambda": 1000,
+      "C": 2,
+      "n_region_plots": 3
+    },
+    "enrichment": {
+      "enabled": true,
+      "collections": [
+        "hallmark",
+        "go_bp"
+      ],
+      "directions": [
+        "hyper",
+        "hypo"
+      ],
+      "cpg_location": "all",
+      "max_cpgs": 10000,
+      "padj_cutoff": 0.05,
+      "min_set_size": 10,
+      "max_set_size": 500
+    }
+  },
+  "software_versions": {
+    "input": {
+      "R": "4.5.2",
+      "jsonlite": "2.0.0",
+      "data.table": "1.18.6.1",
+      "IlluminaHumanMethylation450kanno.ilmn12.hg19": "0.6.1",
+      "Bioconductor": "3.21"
+    },
+    "qc": {
+      "R": "4.5.2",
+      "matrixStats": "1.5.0",
+      "IlluminaHumanMethylation450kanno.ilmn12.hg19": "0.6.1",
+      "Bioconductor": "3.21"
+    },
+    "exploration": {
+      "R": "4.5.2",
+      "matrixStats": "1.5.0",
+      "Bioconductor": "3.21"
+    },
+    "differential_methylation": {
+      "R": "4.5.2",
+      "limma": "3.64.3",
+      "matrixStats": "1.5.0",
+      "IlluminaHumanMethylation450kanno.ilmn12.hg19": "0.6.1",
+      "Bioconductor": "3.21"
+    },
+    "regions": {
+      "R": "4.5.2",
+      "DMRcate": "3.4.1",
+      "limma": "3.64.3",
+      "Bioconductor": "3.21"
+    },
+    "enrichment": {
+      "R": "4.5.2",
+      "missMethyl": "1.42.0",
+      "msigdbr": "26.1.1",
+      "limma": "3.64.3",
+      "org.Hs.eg.db": "3.21.0",
+      "Bioconductor": "3.21"
+    }
+  }
+}

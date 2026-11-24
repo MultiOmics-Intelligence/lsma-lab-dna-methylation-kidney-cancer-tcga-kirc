@@ -1,0 +1,4 @@
+cpg_list	measured_in_validation	same_direction	same_direction_and_significant	binomial_p_vs_chance
+Top 100 gaining methylation	55	55	55	2.8e-17
+Top 100 losing methylation	27	27	27	7.5e-09
+All called CpGs	31174	30733	26666	<1e-300
