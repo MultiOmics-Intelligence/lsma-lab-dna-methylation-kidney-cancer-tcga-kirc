@@ -304,6 +304,7 @@ lsma-lab-dna-methylation-kidney-cancer-tcga-kirc/
   - [single-cell RNA-seq](https://github.com/MultiOmics-Intelligence/lsma-lab-single-cell-kidney-cancer-ccrcc)
   - [active enhancers, ChIP-seq](https://github.com/MultiOmics-Intelligence/lsma-lab-chip-seq-kidney-cancer-enhancers)
   - [somatic mutations and copy number](https://github.com/MultiOmics-Intelligence/lsma-lab-somatic-mutations-kidney-cancer-tcga-kirc)
+  - [proteomics](https://github.com/MultiOmics-Intelligence/lsma-lab-proteomics-kidney-cancer-cptac)
 
 ## Run it yourself
 
