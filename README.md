@@ -199,6 +199,58 @@ Every step below is a stage in the LSMA Analysis Lab, run with the settings in [
 
 **Software:** R 4.5.2 and Bioconductor 3.21, with limma, DMRcate, missMethyl and the Illumina 450K annotation (hg19), in the versions listed in the settings file.
 
+## The mathematics behind the methods
+
+The formulas below are the ones the lab's code applies, with the settings of this run.
+
+**Beta value.** How methylated a CpG is on the array.
+
+$$
+\beta = \frac{M}{M + U + \alpha}
+$$
+
+$M$ and $U$ are the methylated and unmethylated signals of the CpG, and $\alpha$ is a small offset that keeps $\beta$ stable when both signals are weak (Illumina's definition uses $\alpha = 100$). $\beta$ runs from 0 (unmethylated) to 1 (fully methylated). Here the beta values arrived already computed by the GDC's SeSAMe pipeline; the lab did not normalise them again.
+
+**M-value.** The scale used for testing and for the exploration.
+
+$$
+m = \log_2 \frac{\beta}{1 - \beta}
+$$
+
+Beta values bunch up near 0 and 1, where their variance shrinks. The M-value spreads them out so that the variance is more even, which suits a linear model. Before the logarithm, the lab moves $\beta$ inside the range 0.001 to 0.999 so that $m$ stays finite.
+
+**Paired linear model for each CpG.**
+
+$$
+m_{gi} = \mu_{g, \text{tissue}(i)} + \gamma_{g, \text{patient}(i)} + \varepsilon_{gi}, \qquad \hat{\tau}_g = \hat{\mu}_{g, \text{tumour}} - \hat{\mu}_{g, \text{normal}}
+$$
+
+$m_{gi}$ is the M-value of CpG $g$ in sample $i$, $\mu$ is the mean of each tissue, $\gamma$ is a term for each patient and $\varepsilon$ is noise. Because every patient gives both a tumour and a normal sample, the patient terms absorb the differences between people, and $\hat{\tau}_g$ is a within-patient comparison (the design `~ tissue + patient`). The same model fitted to beta values gives the effect size $\Delta\beta_g$.
+
+**Moderated t-statistic (limma).**
+
+$$
+\tilde{s}_g^{2} = \frac{d_0  s_0^{2} + d_g  s_g^{2}}{d_0 + d_g}, \qquad \tilde{t}_g = \frac{\hat{\tau}_g}{\tilde{s}_g \sqrt{v_g}}
+$$
+
+$s_g^2$ is the residual variance of CpG $g$, with $d_g = 24$ residual degrees of freedom (50 arrays minus 26 model terms). $s_0^2$ and $d_0$ are a prior variance and its weight, estimated from all CpGs together (empirical Bayes), and $v_g$ is the variance factor that the design gives to $\hat{\tau}_g$. Borrowing strength from all CpGs stops a CpG with a tiny variance by chance from looking significant. Under no difference, $\tilde{t}_g$ follows a t distribution with $d_0 + d_g$ degrees of freedom.
+
+**Benjamini–Hochberg correction.**
+
+$$
+p^{\text{adj}}_{(i)} = \min_{j \ge i}   \min\left(1, \frac{N  p_{(j)}}{j}\right)
+$$
+
+$p_{(1)} \le \dots \le p_{(N)}$ are the ordered p-values of the $N = 351{,}036$ CpGs tested. Calling CpGs at adjusted p < 0.05 keeps the expected share of false discoveries among them at 5%. A CpG is reported when, in addition, $\lvert \Delta\beta_g \rvert \ge 0.1$.
+
+**Regions (DMRcate).**
+
+$$
+S(x_i) = \sum_{j  :  \lvert x_j - x_i \rvert \le \lambda} \exp\left(-\frac{(x_j - x_i)^2}{2\sigma^2}\right) \tilde{t}_j^{2}, \qquad \sigma = \frac{\lambda}{C} = \frac{1000}{2} = 500 \text{ bp}
+$$
+
+$x_i$ is the genomic position of CpG $i$ and $\tilde{t}_j$ the moderated t of its neighbours, so $S$ is a Gaussian-weighted sum of nearby evidence ($\lambda = 1{,}000$ bp, $C = 2$). DMRcate compares $S$ with its expected value under no difference (using Satterthwaite's approximation), corrects with Benjamini–Hochberg at FDR 0.05, and joins significant CpGs that lie within $\lambda$ of each other into regions. The lab keeps regions with at least 3 CpGs and a mean $\Delta\beta$ of at least 0.05 in size.
+
 ---
 
 ## Validation
